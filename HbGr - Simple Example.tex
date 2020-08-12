@@ -1,0 +1,43 @@
+\documentclass[12pt]{scrartcl}
+
+% To compile this document: latexmk -xelatex -synctex=1 nameThisDoc.tex 
+
+% FONTS:
+% https://www.overleaf.com/learn/latex/Multilingual_typesetting_on_Overleaf_using_polyglossia_and_fontspec
+% https://www.overleaf.com/latex/examples/how-to-write-multilingual-text-with-different-scripts-in-latex/wfdxqhcyyjxz
+
+\usepackage{silence}
+\WarningFilter{latex}{Command \InputIfFileExists}
+
+\usepackage{fontspec} % essencial
+\usepackage{xunicode} % essencial
+
+%%% For language switching -- like babel, but for xelatex
+\usepackage{polyglossia}  % essencial
+
+
+\setmainlanguage{english}
+\setotherlanguages{greek, hebrew} %% or other languages 
+
+% Main serif font for English (Latin alphabet) text
+\setmainfont{Noto Serif}
+\setsansfont{Noto Sans}
+\setmonofont{Noto Mono}
+
+% define fonts for other languages
+\newfontfamily\hebrewfont[Script=Hebrew]{Hadasim CLM}   % Acrescentado.
+\newfontfamily\greekfont[Script=Greek]{GFS Artemisia}
+
+
+
+\begin{document}
+
+
+  {\Large Jesus: Is `\texthebrew{יֵשׁוּעַ}' in hebrew. And `\textgreek{Ιησούς}' in greek.}
+
+  \vspace{1cm}
+
+  {\Large Jesus em hebraico é `\texthebrew{יֵשׁוּעַ}'. E em grego: `\textgreek{Ιησούς}' sendo que a pronunciação é ``Iesús".}
+
+
+\end{document}
