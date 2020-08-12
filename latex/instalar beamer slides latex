@@ -1,0 +1,28 @@
+
+ 2003  sudo apt install sudo apt-get install texlive-latex-base
+ 2004  sudo apt-get install texlive-latex-base
+ 2005  sudo apt-get install texlive-latex-extra
+ 2006  sudo apt install texlive-fonts-recommended texlive-fonts-extra
+
+
+sudo apt install pandoc mupdf
+
+mupdf A_modern_beamer_theme.pdf
+
+# pandoc exemplo.md -t beamer --dpi=300 -o exemplo.pdf
+
+pandoc exemplo.md -t beamer -o exemplo.pdf
+mupdf exemplo.pdf 
+
+imagens:
+![my caption](./figures/myimage.png){ width=250px }
+
+
+
+The matrix’s rows list the default Beamer themes, and the matrix’s columns list the default Beamer color themes. In a LATEX document’s preamble, set the theme using \usetheme{Berlin} and set the the color theme using \usecolortheme{crane}, where Berlin and crane are replaced with the theme and color theme of your choosing.
+
+
+https://mpetroff.net/files/beamer-theme-matrix/
+
+https://hartwork.org/beamer-theme-matrix/
+

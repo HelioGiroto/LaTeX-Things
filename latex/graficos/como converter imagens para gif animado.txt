@@ -1,0 +1,16 @@
+converter varias imagens em gif animado:
+
+	convert a*.png animados.gif
+
+
+Arquivos são:
+
+a1.png  a2.png  a3.png  a4.png  a5.png  a6.png  a7.png
+
+
+
+
+
+
+
+

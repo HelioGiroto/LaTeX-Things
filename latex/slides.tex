@@ -1,0 +1,72 @@
+% COMO COMPILAR E EXECUTAR ESSE SCRIPT LATEX:
+% pdflatex nomeArq.tex
+% mupdf nomeArq.pdf
+
+% muda a cor do slide...
+\documentclass{beamer}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+\begin{frame}{A white frame}
+\centering olá como vai tú?
+\end{frame}
+
+% Change all subsequent frames to violet
+\setbeamercolor{background canvas}{bg=violet!20}
+\begin{frame}{A violet frame}
+\end{frame}
+
+\begin{frame}{This frame is also violet}
+\end{frame}
+
+% But this frame only will be yellow: note { ... } around
+% the \setbeamercolor and the frame to limit the scope 
+
+{\setbeamercolor{background canvas}{bg=yellow!20}
+\begin{frame}{This frame is yellow}
+\end{frame}
+}
+
+\begin{frame}{Subsequent frames will be violet}
+\end{frame}
+
+% Tenta um black:
+\setbeamercolor{background canvas}{bg=black}
+\begin{frame}{\color{white}A BLACK frame}
+\centering {\color{white}Aqui a letra é branca}
+\end{frame}
+
+
+\end{document}
+
+
+% IMAGENS EM BACKGOUND:
+% \documentclass{beamer}
+% \usepackage{tikz}
+
+% \usebackgroundtemplate{%
+% \tikz\node[opacity=0.3] {\includegraphics[height=\paperheight,width=\paperwidth]{ctanlion}};}
+
+% \begin{document}
+% \begin{frame}
+% CTAN lion drawing by Duane Bibby.
+% \end{frame}
+% \end{document}
+
+% outro exemplo: 
+
+% \documentclass{beamer}
+% \usepackage{tikz}
+
+% \usebackgroundtemplate{%
+% \tikz[overlay,remember picture] \node[opacity=0.3, at=(current page.center)] {
+%    \includegraphics[height=\paperheight,width=\paperwidth]{example-image-a}};
+}
+
+% \begin{document}
+
+% \begin{frame}
+% Background transparent image, centered on slide
+% \end{frame}
+
+% \end{document}
